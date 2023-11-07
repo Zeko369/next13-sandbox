@@ -2,13 +2,14 @@ import React from "react";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+const action = async (data: FormData) => {
+  "use server";
+  cookies().set("count", data.get("count") as string);
+  redirect("/counter");
+};
+
 export default function Page() {
   const count = Number(cookies().get("count")?.value) || 0;
-  const action = async (data: FormData) => {
-    "use server";
-    cookies().set("count", data.get("count") as string);
-    redirect("/counter");
-  };
 
   return (
     <form action={action}>
