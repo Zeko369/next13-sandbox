@@ -1,5 +1,6 @@
 import { Counter } from "fullstack-counter";
-import { initializePosts } from "fullstack-posts";
+// import { initializePosts } from "fullstack-posts";
+import { initializePosts } from "./package";
 
 import { prisma } from "~/db";
 
