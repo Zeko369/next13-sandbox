@@ -2,6 +2,7 @@
 
 import React from "react";
 
+// @ts-ignore
 export const CreateForm = ({ action, path }) => {
   return (
     <form action={action.bind(null, path)} className="flex flex-col gap-2">
